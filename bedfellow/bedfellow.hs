@@ -1,5 +1,5 @@
-newtype Person = String
-newtype Company = String
+data Person  = Person String
+data Company = Company String
 
 type Employment = (Person, Company)
 type Bedfellowship = (Person, Person)
