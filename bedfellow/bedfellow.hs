@@ -4,11 +4,8 @@ newtype Company = Company String
 data Relationship = Employment (Person, Company) |
                     Bedfellowship (Person, Person)
 
-type P = Person
-type C = Company
-
 ($$) :: String -> String -> Relationship
-($$) = undefined
+($$) person company = (person :: Person, company :: Company)
 
 (><) :: String -> String -> Relationship
 (><) = undefined
