@@ -1,1 +1,1 @@
-alias twitter="( cd $PWD && ./archive/twitter )"
+alias twitter="( cd $PWD && ./archive/twitter.py )"
