@@ -1,18 +1,16 @@
-data Person  = Person String
-data Company = Company String
+newtype Person = Person String
+newtype Company = Company String
+
+data Relationship = Employment (Person, Company) |
+                    Bedfellowship (Person, Person)
+
 type P = Person
 type C = Company
 
-type Employment = (Person, Company)
-type Bedfellowship = (Person, Person)
+($$) :: String -> String -> Relationship
+($$) = undefined
 
--- (---) :: Person -> Company -> Employment
--- (---) _ _ = "aoe"
-
-a :: Person -> Company -> Employment
-a = undefined
-
-a :: Person -> Person -> Employment
-a = undefined
+(><) :: String -> String -> Relationship
+(><) = undefined
 
 main = do putStrLn "3"
