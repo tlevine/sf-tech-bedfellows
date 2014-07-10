@@ -4,10 +4,11 @@ newtype Company = Company String
 data Relationship = Employment (Person, Company) |
                     Bedfellowship (Person, Person)
 
-($$) :: String -> String -> Relationship
-($$) person company = (person :: Person, company :: Company)
+type Graph = [Relationship]
+type P = Person
+type C = Company
 
-(><) :: String -> String -> Relationship
-(><) = undefined
+graph :: Graph
+graph = [ (joe, "Twitter" :: Company) ]
 
 main = do putStrLn "3"
